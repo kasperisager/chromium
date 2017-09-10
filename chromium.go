@@ -116,7 +116,7 @@ func (chromium *chromium) Start() (uint16, error) {
 		return 0, err
 	}
 
-	go Scan(stderr, chromium.errs)
+	go scan(stderr, chromium.errs)
 
 	poller := watcher.New()
 

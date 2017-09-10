@@ -34,7 +34,7 @@ func (error *Error) Message() string {
 	return error.msg
 }
 
-func Scan(in io.Reader, out chan<- error) {
+func scan(in io.Reader, out chan<- error) {
 	scanner := bufio.NewScanner(in)
 
 	for scanner.Scan() {
